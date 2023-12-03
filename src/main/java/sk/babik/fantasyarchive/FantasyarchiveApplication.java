@@ -1,4 +1,4 @@
-package sk.babik.fantasyarchive.fantasyarchive;
+package sk.babik.fantasyarchive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

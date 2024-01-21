@@ -8,11 +8,12 @@ import sk.babik.fantasyarchive.Role;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
 @Setter
 @Getter
 @Entity
 @Table(name="fantasy_user")
-public class FantasyUser {
+public class FantasyUser  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,11 +22,20 @@ public class FantasyUser {
     @Column(name="username")
     private String username;
 
-    @Column(name="password")
+    @Column(name = "password", columnDefinition = "TEXT")
     private String password;
+
+    @Column(name = "salt", columnDefinition = "TEXT")
+    private String salt;
 
     @Column(name="email")
     private String email;
+
+    @Column(name="avatar")
+    private String avatar;
+
+    @Column(name="bio", columnDefinition = "TEXT")
+    private String bio;
 
     @Column(name="role_id")
     private Role role;

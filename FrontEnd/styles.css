@@ -1,0 +1,209 @@
+.container {
+    background-color: snow;
+}
+
+.my-page-body {
+    background-image: url("Images/Backround-img.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: auto;
+}
+
+/*home-page, articles-page*/
+.outlook-article-img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 5px solid black;
+}
+
+/*home-page*/
+.list-group {
+    margin-bottom: 15px;
+}
+
+/*article-page*/
+.writer-img > img {
+    margin-top: 50px;
+    width: 50%;
+    border-radius: 50%;
+    align-self: center;
+}
+
+/*article-page*/
+.text-article {
+    font-size: 120%;
+    text-align: justify;
+}
+
+/*article-page*/
+.article-img > img {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+/*home-page*/
+.home-article-header {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+/*home-page*/
+.home-text-article {
+    font-size: 90%;
+}
+
+/*articles-page*/
+.text-articles {
+    font-size: 90%;
+}
+
+/*articles-page*/
+.articles-header {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+/*header*/
+.main-header {
+    background-color: snow;
+}
+
+.main-header .main-title {
+    width: 60%;
+}
+
+.main-footer .social-img {
+    width: 30px;
+    margin: 5px;
+}
+
+.main-footer .fw-bold {
+    margin-top: 15px;
+}
+
+.hyper-link {
+    text-decoration: none;
+    color: black;
+}
+
+.hyper-link:hover {
+    color: darkgray;
+    transition: 0.2s;
+}
+
+.img-link:hover .outlook-article-img {
+    border: 5px solid darkgray;
+    transition: 0.2s;
+}
+
+.interactive-link:hover {
+    cursor: pointer;
+}
+
+.article-annotation {
+    color: lightgray;
+}
+
+.interactive-link:hover img {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+/*padding*/
+.spacer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.modal-body{
+    background-color: snow;
+}
+
+.modal-header{
+    background-color: snow;
+}
+
+.modal-footer{
+    background-color: snow;
+}
+
+.modal-dialog .small {
+    visibility: hidden;
+    position:  absolute;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.nav-link:hover #avatar {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(33, 37, 41);
+}
+
+/* for vertical resizing in description write-article */
+#article-description {
+    resize: vertical;
+}
+
+
+.main-title {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.main-title:hover {
+    transform: scale(1.1);
+}
+
+
+.social-img:hover {
+    transform: scale(1.2);
+}
+
+.icon-link-hover:hover img {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control .form-text {
+    display: none;
+    color: red;
+}
+
+.form-control.error .form-text {
+    display: block;
+}
+
+.form-control.success .form-text {
+    display: block;
+    color: green;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Header| FantasyArchive</title>
+</head>
+
+<div class="main-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-11">
+                <a href="page-home.html"><img class="main-title" src="Images/FantasyArchive-Logo.png"
+                                              ALT="FantasyArchive logo"></a>
+            </div>
+
+            <div class="col-1 align-self-end">
+                <ul class="nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                            <img src="Images/icons/person-circle.svg" id="avatar" alt="Account" style="float: right;">
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li id="profileLinkContainer">
+                                <a class="dropdown-item" href="page-profile.html">Profile</a>
+                            </li>
+
+                            <li id="dividerLinkContainer">
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li id="registrationLinkContainer">
+                                <a class="dropdown-item" href="page-registration.html">Register</a>
+                            </li>
+
+                            <li id="signInLinkContainer">
+                                <a class="dropdown-item" id="signInLink" href="page-sign-in.html">Sign in
+                                    <img src="Images/icons/box-arrow-in-right.svg" alt="Icon for signing in">
+                                </a>
+                            </li>
+                            <li id="signOutLinkContainer" >
+                                <a class="dropdown-item" id="signOutLink" href="javascript:signOut();"> Sign out
+                                    <img src="Images/icons/box-arrow-right.svg" alt="Icon for signing out">
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container bg-dark">
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-dark bg-dark">
+                <li class="nav-item">
+                    <a class="nav-link" href="page-home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-articles.html">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-users.html">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-discussion.html">Discussion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page-add-tag.html" >Tag management</a>
+                </li>
+                <li class="nav-item" id="writeArticleLinkContainer" style="display: none"  >
+                    <a class="nav-link" href="page-write-article.html">Write article</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+
+

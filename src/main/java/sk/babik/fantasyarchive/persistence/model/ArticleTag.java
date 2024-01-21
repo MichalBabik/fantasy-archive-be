@@ -1,15 +1,21 @@
 package sk.babik.fantasyarchive.persistence.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
+@Entity
 @Table(name="article_tag")
 public class ArticleTag {
 
-    @Column(name="article_id")
-    private Long articleId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name="tag_id")
-    private Long tagId;
+    @ManyToOne
+    @JoinColumn(name = "article_id")
+    private Article article;
+
+    @ManyToOne
+    @JoinColumn(name = "tag_id")
+    private Tag tag;
 
 }

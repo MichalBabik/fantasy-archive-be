@@ -5,7 +5,7 @@ const getParameterByName = (name) => {
 
 const getArticleAuthorDetails = (articleId) => {
     return new Promise((resolve, reject) => {
-        // Fetch the author details using the getArticleCreatorUsername endpoint
+
         $.ajax({
             type: 'GET',
             url: `http://localhost:8080/api/article/getArticleCreatorDetails/${articleId}`,
@@ -121,12 +121,12 @@ const updateArticlePage = () => {
                 type: 'GET',
                 url: `http://localhost:8080/api/article/getArticle/${articleId}`,
                 success: function (article) {
-                    // Pass the entire authorDetails object to generateArticlePageHTML
+
                     const articleContentHTML = generateArticlePageHTML(article, authorDetails);
 
                     $('.my-page-body').html(articleContentHTML);
 
-                    // Fetch and display tags associated with the article
+
                     fetchArticleTags(articleId);
 
                     $.ajax({
@@ -164,13 +164,11 @@ const updateArticlePage = () => {
 const fetchArticleTags = (articleId) => {
     console.log('Fetching tags for articleId:', articleId);
 
-    // Fetch article tags using the provided endpoint
     $.ajax({
         type: 'GET',
         url: `http://localhost:8080/api/article/getArticleTags/${articleId}`,
         success: function (tags) {
             console.log('Tags received:', tags);
-            // Display the tags below the "Add Tag" button
             displayArticleTags(tags);
         },
         error: function (error) {
@@ -196,30 +194,25 @@ const handleAddTagClick = () => {
     const articleId = getParameterByName('articleId');
     const selectedTagId = $('#tagsDropdown').val();
 
-    // Check if a tag is selected
     if (!selectedTagId) {
         console.error('No tag selected!');
         return;
     }
 
-    // Log information for debugging
     console.log('articleId: ' + articleId + ', selectedTagId: ' + selectedTagId);
 
-    // Send the tagId directly in the URL
+
     $.ajax({
         type: 'PUT',
         url: `http://localhost:8080/api/article/updateTags/${articleId}/${selectedTagId}`,
         contentType: 'application/json',
         success: function (response) {
             console.log('Tag added successfully:', response);
-            // Optionally, you can update the UI or perform other actions here
             alert('Tag added successfully!');
-            // Fetch and display updated tags associated with the article
             fetchArticleTags(articleId);
         },
         error: function (error) {
             console.error('Error adding tag:', error);
-            // Optionally, handle the error or display an error message
             alert('Error adding tag: ' + error.responseJSON.message);
         }
     });

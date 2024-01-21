@@ -18,7 +18,7 @@ function fetchUserData(userId) {
 
             document.getElementById("profile-content").innerHTML = profileHtml;
 
-            // Move the event listener here after the HTML is generated
+
             document.getElementById("save-profile-changes").addEventListener("click", function () {
                 updateProfile(userId);
             });
@@ -33,7 +33,7 @@ function updateProfile(userId) {
     const imageInput = document.getElementById("user-image");
     const imagePath = imageInput.files.length > 0 ? `Images/users/${imageInput.files[0].name}` : null;
 
-    // Create an object with the data you want to send
+
     const requestData = {
         bio: bio,
         avatar: imagePath,
@@ -45,7 +45,7 @@ function updateProfile(userId) {
         contentType: "application/json",
         data: JSON.stringify(requestData),
         success: function (updatedUserData) {
-            // Update UI with new data
+
             updateProfileUI(updatedUserData);
             console.log("Profile updated successfully:", updatedUserData);
         },
@@ -56,13 +56,13 @@ function updateProfile(userId) {
 }
 
 function updateProfileUI(userData) {
-    // Update the profile picture
+
     const profilePictureElement = document.querySelector(".profile-picture");
     if (profilePictureElement) {
         profilePictureElement.src = userData.avatar;
     }
 
-    // Update the bio
+
     const bioElement = document.getElementById("user-bio");
     if (bioElement) {
         bioElement.value = userData.bio || "";

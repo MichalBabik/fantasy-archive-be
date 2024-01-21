@@ -7,17 +7,6 @@ import java.util.Base64;
 
 public class PasswordHashing {
 
-//    public String generateHashPassword(String pPassword) {
-//        String password = pPassword;
-//        String salt = generateSalt();
-//        String hashedPassword = hashPassword(password, salt);
-//
-//        // To verify a password, you would compare the stored hashed password with the newly hashed password.
-//        boolean passwordMatch = checkPassword(password, salt, hashedPassword);
-//        System.out.println("Password Match: " + passwordMatch);
-//        return hashedPassword;
-//    }
-
     public String generateSalt() {
         byte[] saltBytes = new byte[16];
         SecureRandom random = new SecureRandom();

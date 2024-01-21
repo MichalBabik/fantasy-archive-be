@@ -71,6 +71,22 @@ public class RestController {
         }
     }
 
+    @GetMapping("/user/isPrivileged/{id}")
+    public ResponseEntity<Boolean> isPrivileged(@PathVariable Long id){
+        FantasyUser user = userService.getFantasyUser(id);
+        if (user != null) {
+            if (userService.hasPrivilege(id)) {
+                return  new ResponseEntity<>(true, HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(false, HttpStatus.UNAUTHORIZED);
+            }
+        }
+        return new ResponseEntity<>(false, HttpStatus.NOT_FOUND);
+
+    }
+
+
+
     @GetMapping("/user/check/{email}")
     public ResponseEntity<String> isFantasyUserWithEmail(@PathVariable String email){
         boolean isEmailAvailable = userService.isEmailAvailable(email);

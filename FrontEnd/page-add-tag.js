@@ -44,7 +44,6 @@ $(document).ready(function () {
     });
 
 
-    // Fetch and populate tags for the delete dropdown
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/api/tag/allTags',
@@ -78,7 +77,6 @@ $(document).ready(function () {
             success: function (response) {
                 if (response === 'Tag deleted') {
                     alert('Tag deleted successfully!');
-                    // Optionally, refresh the dropdown or perform other actions
                 } else {
                     alert('Error deleting tag: ' + response);
                 }
